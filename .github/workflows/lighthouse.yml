@@ -1,0 +1,17 @@
+name: Lighthouse CI
+on: [push]
+jobs:
+  lighthouseci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install -g @lhci/cli@0.11.x
+      - run: |
+        lhci collect
+        rm -rf _reports
+        cp -r .lighthouseci/*.html _reports
+        git ci -am "Lighthouse reports"
+        git push
