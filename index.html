@@ -22,11 +22,11 @@
     <table class="ba w-100 tl br2 mb4 lh-solid" cellspacing="0">
       <thead>
         <th class="pa3 nowrap">網址</th>
+        <th class="pa3 nowrap">詳細報告</th>
         <th class="pa3 nowrap">網站性能</th>
         <th class="pa3 nowrap">親和力</th>
         <th class="pa3 nowrap">包含不安全的程式</th>
         <th class="pa3 nowrap">測試時間</th>
-        <th class="pa3 nowrap">詳細報告</th>
       </thead>
     {% for report in site.static_files %}
     {% unless report.path contains "reports/"%}{% continue %}{% endunless %}
@@ -34,11 +34,11 @@
       {% assign data = site.data[name] %}
         <tr class="{% cycle "bg-subtle", "" %}">
           <td class="pa3"><a href="{{ site.data[name]["finalUrl"] }}">{{ data["finalUrl"] }}</a></td>
+          <td class="pa3"><a target="report" href="{{ report.path }}#lh-log">詳細報告</a></td>
           <td class="pa3">{{ data["categories"]["performance"]["score"] | times: 100 | round }}</td>
           <td class="pa3">{{ data["categories"]["accessibility"]["score"] | times: 100 | round }}</td>
           <td class="pa3">{% if data["audits"]["no-vulnerable-libraries"]["score"] == 0 %}有{% else %}無{% endif %}</td>
           <td class="pa3">{{ data["fetchTime"] | date: "%Y-%m-%d %H:%M" }}</td>
-          <td class="pa3"><a target="report" href="{{ report.path }}#lh-log">詳細報告</a></td>
         </tr>
     {% endfor %}
     </table>
