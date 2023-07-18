@@ -5,7 +5,8 @@
       "url": [
         "https://moda.gov.tw/",
         "https://pdis.nat.gov.tw/zh-TW/",
-        "https://www.president.gov.tw/"
+        "https://www.president.gov.tw/",
+        "https://lighthouse.pdis.run/"
       ],
       "settings": {
         "preset": "desktop",
