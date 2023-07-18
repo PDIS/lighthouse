@@ -10,8 +10,6 @@ jobs:
           node-version: 16
       - run: npm install -g @lhci/cli@0.11.x
       - run: |
-        lhci collect
-        rm -rf _reports
-        cp -r .lighthouseci/*.html _reports
+        ./collect-report
         git ci -am "Lighthouse reports"
         git push

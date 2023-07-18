@@ -1,15 +1,32 @@
 ---
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lighthouse</title>
+  <title>Lighthouse reports</title>
 </head>
 <body>
-  {% for report in site.reports %}
-    <a href="{{ report.url }}">{{ report.path }}</a>
+  <h1>Lighthouse reports</h1>
+  <table>
+    <thead>
+      <th>網址</th>
+      <th>效率</th>
+      <th>親和力</th>
+      <th>詳細報告</th>
+    </thead>
+  {% for report in site.static_files %}
+  {% unless report.path contains "reports/"%}{% continue %}{% endunless %}
+    {% assign name = report.name | replace: '.html', '' %}
+    {% assign data = site.data[name] %}
+      <tr>
+        <td><a href="{{ site.data[name]["finalUrl"] }}">{{ data["finalUrl"] }}</a></td>
+        <td>{{ data["categories"]["performance"]["score"] | times: 100 | round }}</td>
+        <td>{{ data["categories"]["accessibility"]["score"] | times: 100 | round }}</td>
+        <td><a href="{{ report.path }}">詳細報告</a></td>
+      </tr>
   {% endfor %}
+  </table>
 </body>
 </html>

@@ -1,0 +1,5 @@
+rm -rf _data/lhr*
+rm -rf reports/lhr*
+lhci collect
+cp -r .lighthouseci/*.html reports
+cp -r .lighthouseci/*.json _data

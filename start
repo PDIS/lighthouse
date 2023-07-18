@@ -1,3 +1,0 @@
-rm -rf _reports
-npx @lhci/cli collect
-cp -r .lighthouseci/*.html _reports
