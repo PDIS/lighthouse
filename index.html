@@ -14,6 +14,7 @@
       <th>網址</th>
       <th>效率</th>
       <th>親和力</th>
+      <th>含有不安全第三方套件</th>
       <th>詳細報告</th>
     </thead>
   {% for report in site.static_files %}
@@ -24,6 +25,7 @@
         <td><a href="{{ site.data[name]["finalUrl"] }}">{{ data["finalUrl"] }}</a></td>
         <td>{{ data["categories"]["performance"]["score"] | times: 100 | round }}</td>
         <td>{{ data["categories"]["accessibility"]["score"] | times: 100 | round }}</td>
+        <td>{% if data["audits"]["no-vulnerable-libraries"]["score"] == 0 %}有{% else %}無{% endif %}</td>
         <td><a href="{{ report.path }}">詳細報告</a></td>
       </tr>
   {% endfor %}
