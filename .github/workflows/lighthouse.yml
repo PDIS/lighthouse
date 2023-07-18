@@ -13,7 +13,6 @@ jobs:
           node-version: 16
       - run: npm install -g @lhci/cli@0.11.x
       - run: ./collect-report
-      - run: git add .
-      - run: git commit -m "Lighthouse reports"
-      - run: git push origin HEAD:main
-
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Generate lighthouse reports"
