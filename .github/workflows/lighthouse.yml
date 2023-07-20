@@ -3,6 +3,10 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 16 * * *'
+  push:
+    paths:
+      - '.lighthouserc.js'
+      - 'collect-report'
 jobs:
   lighthouseci:
     runs-on: ubuntu-latest
