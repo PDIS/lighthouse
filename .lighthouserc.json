@@ -9,7 +9,8 @@
         "https://lighthouse.pdis.run/",
         "https://www.nics.nat.gov.tw/",
         "https://url.gov.tw/",
-        "https://www.moi.gov.tw/"
+        "https://www.moi.gov.tw/",
+        "https://moica.nat.gov.tw/"
       ],
       "settings": {
         "additive": true,
