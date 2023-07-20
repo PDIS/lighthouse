@@ -7,6 +7,10 @@ on:
     paths:
       - '.lighthouserc.js'
       - 'collect-report'
+      - 'lighthouse.yml'
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   lighthouseci:
     runs-on: ubuntu-latest
