@@ -5,9 +5,9 @@ on:
     - cron: '0 16 * * *'
   push:
     paths:
-      - '.lighthouserc.js'
-      - 'collect-report'
-      - 'lighthouse.yml'
+      - './.lighthouserc.json'
+      - './collect-report'
+      - './lighthouse.yml'
 concurrency:
   group: ${{ github.ref }}
   cancel-in-progress: true
