@@ -3,14 +3,15 @@
     "collect":{
       "numberOfRuns": 1,
       "url": [
-        "https://moda.gov.tw/",
+        "https://moda.gov.tw/index.html",
         "https://pdis.nat.gov.tw/zh-TW/",
         "https://www.president.gov.tw/",
         "https://lighthouse.pdis.run/",
         "https://www.nics.nat.gov.tw/",
         "https://url.gov.tw/",
         "https://www.moi.gov.tw/",
-        "https://moica.nat.gov.tw/index.html"
+        "https://moica.nat.gov.tw/index.html",
+        "https://mydata.nat.gov.tw/"
       ],
       "settings": {
         "preset": "desktop",
