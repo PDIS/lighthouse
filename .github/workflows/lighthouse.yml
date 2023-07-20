@@ -7,7 +7,7 @@ on:
     paths:
       - './.lighthouserc.json'
       - './collect-report'
-      - './lighthouse.yml'
+      - './.github/workflows/lighthouse.yml'
 concurrency:
   group: ${{ github.ref }}
   cancel-in-progress: true
