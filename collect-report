@@ -1,5 +1,6 @@
 rm -rf _data/lhr*
 rm -rf reports/lhr*
 lhci collect
+lhci collect --settings.preset=desktop
 cp -r .lighthouseci/*.html reports
 cp -r .lighthouseci/*.json _data

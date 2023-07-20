@@ -8,10 +8,11 @@
         "https://www.president.gov.tw/",
         "https://lighthouse.pdis.run/",
         "https://www.nics.nat.gov.tw/",
-        "https://url.gov.tw/"
+        "https://url.gov.tw/",
+        "https://www.moi.gov.tw/"
       ],
       "settings": {
-        "preset": "desktop",
+        "additive": true,
         "extraHeaders": "{\"Accept-Language\": \"zh-TW,zh;0.9\"}"
       }
     }
