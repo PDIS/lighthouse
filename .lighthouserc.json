@@ -10,11 +10,10 @@
         "https://www.nics.nat.gov.tw/",
         "https://url.gov.tw/",
         "https://www.moi.gov.tw/",
-        "https://moica.nat.gov.tw/",
         "https://moica.nat.gov.tw/index.html"
       ],
       "settings": {
-        "additive": true,
+        "preset": "desktop",
         "extraHeaders": "{\"Accept-Language\": \"zh-TW,zh;0.9\"}"
       }
     }
