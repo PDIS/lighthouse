@@ -4,12 +4,13 @@ on:
   schedule:
     - cron: '0 16 * * *'
   push:
+    branches: 'main'
     paths:
-      - './.lighthouserc.json'
-      - './collect-report'
-      - './.github/workflows/lighthouse.yml'
+      - '.lighthouserc.json'
+      - 'collect-report'
+      - '.github/workflows/lighthouse.yml'
 concurrency:
-  group: ${{ github.ref }}
+  group: 'main'
   cancel-in-progress: true
 jobs:
   lighthouseci:
