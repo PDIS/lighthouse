@@ -25,7 +25,7 @@
         <th class="pa3 nowrap">詳細報告</th>
         <th class="pa3 nowrap">網站性能</th>
         <th class="pa3 nowrap">親和力</th>
-        <th class="pa3 nowrap">包含不安全的程式</th>
+        <!-- <th class="pa3 nowrap">包含不安全的程式</th> -->
         <th class="pa3 nowrap">測試時間</th>
       </thead>
     {% for report in site.static_files %}
@@ -37,7 +37,7 @@
           <td class="pa3"><a target="report" href="{{ report.path }}#lh-log">詳細報告</a></td>
           <td class="pa3">{{ data["categories"]["performance"]["score"] | times: 100 | round }}</td>
           <td class="pa3">{{ data["categories"]["accessibility"]["score"] | times: 100 | round }}</td>
-          <td class="pa3">{% if data["audits"]["no-vulnerable-libraries"]["score"] == 0 %}<mark>有</mark>{% else %}無{% endif %}</td>
+          <!-- <td class="pa3">{% if data["audits"]["no-vulnerable-libraries"]["score"] == 0 %}<mark>有</mark>{% else %}無{% endif %}</td> -->
           <td class="pa3">{{ data["fetchTime"] | date: "%Y-%m-%d %H:%M" }}</td>
         </tr>
     {% endfor %}
