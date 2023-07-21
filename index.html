@@ -34,7 +34,7 @@
       {% assign data = site.data[name] %}
         <tr class="{% cycle "bg-subtle", "" %}">
           <td class="pa3"><a href="{{ site.data[name]["finalUrl"] }}">{{ data["finalUrl"] }}</a></td>
-          <td class="pa3"><a target="report" href="{{ report.path }}#lh-log">詳細報告</a></td>
+          <td class="pa3"><a target="report" href="./{{ report.path }}#lh-log">詳細報告</a></td>
           <td class="pa3">{{ data["categories"]["performance"]["score"] | times: 100 | round }}</td>
           <td class="pa3">{{ data["categories"]["accessibility"]["score"] | times: 100 | round }}</td>
           <!-- <td class="pa3">{% if data["audits"]["no-vulnerable-libraries"]["score"] == 0 %}<mark>有</mark>{% else %}無{% endif %}</td> -->
