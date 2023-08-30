@@ -11,7 +11,8 @@
         "https://url.gov.tw/",
         "https://www.moi.gov.tw/",
         "https://moica.nat.gov.tw/index.html",
-        "https://mydata.nat.gov.tw/"
+        "https://mydata.nat.gov.tw/",
+        "https://hex.pdis.nat.gov.tw/"
       ],
       "settings": {
         "preset": "desktop",
